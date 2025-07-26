@@ -116,7 +116,7 @@ public partial class Plugin : BaseUnityPlugin
                             n => n.Child(o => o is { name: "Displays" }).Child(_ => true, makeClimbable),
                             n => n.Child(o => o is { name: "GlassFence" }, makeClimbable),
                             // the planes outside
-                            n => n.Child(o => o is { name: "Plane" or "Plane (1)" or "Plane (2)" }, makeClimbable)
+                            n => n.Child(o => o is { name: "Plane" or "Plane (1)" or "Plane (2)" }, makeClimbable).Child(_ => true, makeClimbable)
                         ),
                     n => n
                         .Child(o => o is { name: "Mirror (1)" })
