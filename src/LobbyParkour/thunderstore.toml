@@ -7,7 +7,7 @@ repository = "https://thunderstore.io"
 [package]
 namespace = "amgg"
 name = "LobbyParkour"
-description = "climb around the lobby airport! (removes the invisible walls)"
+description = "climb around the lobby airport! (removes invisible walls & makes everything climbable)"
 websiteUrl = "https://github.com/adrianmgg/Peak-LobbyParkour-Mod" # TODO: Add a link to your mod repository here (optional)
 containsNsfwContent = false
 
@@ -23,9 +23,9 @@ outdir = "../../artifacts/thunderstore/"
 source = "../../artifacts/bin/LobbyParkour/release/gg.amgg.PeakLobbyParkour.dll"
 target = "plugins/"
 
-[[build.copy]]
-source = "../../CHANGELOG.md"
-target = "/"
+# [[build.copy]]
+# source = "../../CHANGELOG.md"
+# target = "/"
 
 [[build.copy]]
 source = "../../LICENSE"

@@ -1,7 +1,8 @@
 # LobbyParkour
 
-Describe your project here!
+mod for Peak. modifies the lobby by removing invisible walls and setting a bunch of things to be climbable.
 
+<!--
 ## Template Instructions
 
 You can remove this section after you've set up your project.
@@ -29,3 +30,4 @@ dotnet build -c Release -target:PackTS -v d
 > `-c` is short for `--configuration` and `-v d` is `--verbosity detailed`.
 
 The built package will be found at `artifacts/thunderstore/`.
+-->
