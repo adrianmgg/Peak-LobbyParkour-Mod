@@ -20,22 +20,12 @@ public partial class Plugin : BaseUnityPlugin
     {
         Log = Logger;
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        //new NativeDetour(
-        //    AccessTools.Property(typeof(Mesh), "canAccess").GetMethod,
-        //    ((Func<bool>)(() => true)).Method
-        //).Apply();
-        //new NativeDetour(
-        //    AccessTools.Property(typeof(Mesh), "isReadable").GetMethod,
-        //    ((Func<bool>)(() => true)).Method
-        //).Apply();
     }
 
     Coroutine? AirportLoadCompleteCoroutine = null;
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Log.LogInfo($"Scene Loaded: path={scene.path}");
         if (scene is { path: "Assets/8_SCENES/Airport.unity" })
         {
             Log.LogInfo("started loading airport scene...");
@@ -191,7 +181,6 @@ public partial class Plugin : BaseUnityPlugin
 
         protected virtual void Run(GameObject target, int depth)
         {
-            // Log.LogInfo($"query run: {new String(' ', depth * 2)} {target}");
             Action?.Invoke(target);
 
             foreach ((GameObject childGameObject, SceneTreeQueryNode childNode) in
